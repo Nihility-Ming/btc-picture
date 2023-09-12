@@ -53,6 +53,22 @@ a,a:visited {
 	background-color: gray;
 }
 
+.comment {
+	max-width: 650px; 
+	margin: auto;
+}
+
+.comment .s1 {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.comment .s2 {
+	font-size: 14px;
+	color: red;
+}
+
+
 .btcthumbnail {
 	text-align: center;
 	width:33.33%;
@@ -81,18 +97,26 @@ footer {
 }
 </style>
 <h1>比特币精美壁纸<span><span id="btcPicCount">---</span>张</span></h1>
-<div id="container"></div>
-
+<div id="container">
+</div>
 <div style="clear: both;"></div>
+<div class="comment">
+		<hr style="margin-top:15px" />
+		<script src='//npm.elemecdn.com/valine/dist/Valine.min.js'></script>
+		<p class="p1"><span class="s1">评论:</span><span class="s2">（请勿相信评论区里的广告、社交号）</span></p>
+		<div id="vcomments"></div>
+		<script src="/js/myVcomments.js"></script>
+	</div>
 
 <footer>版权所有 © 2023 <a href="/">比特趋势大作手</a></footer>
 
 <script>
 
-document.getElementById("btcPicCount").innerHTML = BTCPicturesCount;
-
-// 将div添加到文档中的某个元素中
+// container元素
 var container = document.getElementById("container");
+
+var btcPicCountEle = document.getElementById("btcPicCount");
+btcPicCountEle.innerHTML = BTCPicturesCount;
 
 if(window.innerWidth > 1200) {
 	container.style.maxWidth="660px";
