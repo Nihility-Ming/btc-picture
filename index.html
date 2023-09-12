@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -10,7 +10,9 @@
 <link rel="apple-touch-icon" href="/images/touch-icon.jpg">
 <meta name="theme-color" content="#fff">
 <script src="fancybox/fancybox/fancybox.umd.js"></script>
+
 <link rel="stylesheet" href="fancybox/fancybox/fancybox.css" />
+<link rel="stylesheet" href="css/index.css" />
 
 <script src="/js/const.js"></script>
 <script src="/js/lozad.min.js"></script>
@@ -19,83 +21,7 @@
 
 </head>
 <body>
-<style>
-body {
-	padding-top: 70px;
-	padding-bottom: 70px;
-}
 
-h1 {
-	font-size: 1.7em;
-	line-height: 70px;
-	padding:0;
-	margin:0;
-	background-color: #fff;
-	text-align:center;
-	position:fixed;
-	top:0;
-	left:0;
-	right:0;
-	border-bottom: 1px solid #ddd;
-}
-
-#btcPicCount {
-	color: red;
-}
-
-a,a:visited {
-	color: blue;
-}
-
-#container {
-	max-width: 460px;
-	margin: auto;
-	background-color: gray;
-}
-
-.comment {
-	max-width: 650px; 
-	margin: auto;
-}
-
-.comment .s1 {
-	font-weight: bold;
-	font-size: 1.1em;
-}
-
-.comment .s2 {
-	font-size: 14px;
-	color: red;
-}
-
-
-.btcthumbnail {
-	text-align: center;
-	width:33.33%;
-	float:left;
-	margin:0;
-	padding:0;
-}
-
-.btcthumbnail img {
-	display: block;
-	margin: 4% auto;
-	width:92%;
-}
-
-footer {
-	line-height: 70px;
-	text-align:center;
-	color: gray;
-	font-size:14px;
-	position:fixed;
-	bottom:0;
-	left:0;
-	right:0;
-	border-top: 1px solid #ddd;
-	background-color: white;
-}
-</style>
 <h1>比特币精美壁纸<span><span id="btcPicCount">---</span>张</span></h1>
 <div id="container">
 </div>
@@ -110,67 +36,7 @@ footer {
 
 <footer>版权所有 © 2023 <a href="/">比特趋势大作手</a></footer>
 
-<script>
-
-// container元素
-var container = document.getElementById("container");
-
-var btcPicCountEle = document.getElementById("btcPicCount");
-btcPicCountEle.innerHTML = BTCPicturesCount;
-
-if(window.innerWidth > 1200) {
-	container.style.maxWidth="660px";
-}
-
-if(window.innerWidth > 1300) {
-	Chatra("expandWidget");
-}
-	
-// 创建一个数组，存储1到xxx的整数
-const sumCount = BTCPicturesCount;
-var numbers = [];
-for (var i = sumCount; i >= 1; i--) {
-  numbers.push(xxxxxpadNumber(i));
-}
-
-for (var i = 0; i < sumCount; i++) {
-	// 创建一个新的div元素
-	var div = document.createElement("div");
-	div.className = "btcthumbnail";
-	if(window.innerWidth > 1200) {
-		div.style.width = "20%";
-	}
-	
-	// 创建一个新的a元素
-	var a = document.createElement("a");
-	a.setAttribute("data-fancybox", "gallery");
-	a.setAttribute("href", "upload/" + numbers[i] + ".jpg");
-	a.setAttribute("data-caption", "比特币精美壁纸：No." + numbers[i]);
-	div.appendChild(a);
-	
-	// 创建一个新的img元素
-	var img =  document.createElement("img");
-	img.setAttribute("data-src", "thumbnail/" + numbers[i] + ".jpg");
-	img.setAttribute("data-placeholder-background", "#eee");
-	img.setAttribute("alt", "No." + numbers[i]);
-	a.appendChild(img);
-
-	container.appendChild(div);
-}
-
-function xxxxxpadNumber(number) {
-  return number.toString().padStart(3, '0');
-}
-
-const el = document.querySelectorAll('img');
-const observer = lozad(el);
-observer.observe();
-
-Fancybox.bind("[data-fancybox]", {
-  // Your custom options
-});
-
-</script>
+<script src="js/index.js"></script>
 
 <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
 <script>LA.init({id: "1yxI18dBtpOcAN9I",ck: "1yxI18dBtpOcAN9I"})</script>

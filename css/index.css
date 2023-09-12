@@ -1,0 +1,77 @@
+body {
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+h1 {
+	z-index:30;
+	font-size: 1.7em;
+	line-height: 70px;
+	padding:0;
+	margin:0;
+	background-color: #fff;
+	text-align:center;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	border-bottom: 1px solid #ddd;
+}
+
+#btcPicCount {
+	color: red;
+}
+
+a,a:visited {
+	color: blue;
+}
+
+#container {
+	max-width: 460px;
+	margin: auto;
+	background-color: gray;
+}
+
+.comment {
+	max-width: 650px; 
+	padding: 0 5px;
+	margin: auto;
+}
+
+.comment .s1 {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.comment .s2 {
+	font-size: 14px;
+	color: red;
+}
+
+
+.btcthumbnail {
+	text-align: center;
+	width:33.33%;
+	float:left;
+	margin:0;
+	padding:0;
+}
+
+.btcthumbnail img {
+	display: block;
+	margin: 4% auto;
+	width:92%;
+}
+
+footer {
+	line-height: 70px;
+	text-align:center;
+	color: gray;
+	font-size:14px;
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	border-top: 1px solid #ddd;
+	background-color: white;
+}
