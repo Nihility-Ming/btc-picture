@@ -16,7 +16,7 @@ git add .
 git commit -m "$inputText"
 git push origin
 
-cp -R ../js/const.js $website_path
+cp -R ../js/const.js $website_path/js
 cd $website_path
 git pull
 git add ./js/const.js
