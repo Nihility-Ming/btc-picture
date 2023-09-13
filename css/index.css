@@ -57,10 +57,17 @@ a,a:visited {
 	padding:0;
 }
 
-.btcthumbnail img {
+.btcthumbnail a {
 	display: block;
 	margin: 4% auto;
 	width:92%;
+}
+
+.btcthumbnail a img {
+	margin: 0;
+	padding:0;
+	display:block;
+	width:100%;
 }
 
 footer {
