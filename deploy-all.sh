@@ -10,7 +10,8 @@ dir_path="/c/Users/Administrator/Desktop/hexo/source/btc-pictures"
 website_path="/c/Users/Administrator/Desktop/Nihility-Ming.github.io"
 hexo_path="/c/Users/Administrator/Desktop/hexo"
 
-echo "阶段一："
+echo ""
+echo "【阶段一】"
 echo ""
 cd $dir_path
 node build.js
@@ -19,7 +20,8 @@ git add .
 git commit -m "$inputText"
 git push origin
 
-echo "阶段二："
+echo ""
+echo "【阶段二】"
 echo ""
 cp -R ../js/const.js $website_path/js
 cd $website_path
@@ -28,11 +30,12 @@ git add ./js/const.js
 git commit -m "$inputText"
 git push origin
 
-echo "阶段三："
+echo ""
+echo "【阶段三】"
 echo ""
 cd $hexo_path
 git pull
-git add ./js/const.js
+git add ./source/js/const.js
 git commit -m "$inputText"
 git push origin
 
