@@ -68,6 +68,7 @@ a,a:visited {
 	padding:0;
 	display:block;
 	width:100%;
+	aspect-ratio:1 / 1;
 }
 
 footer {
