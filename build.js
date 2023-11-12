@@ -25,7 +25,7 @@ fs.readdir(inputFolder, (err, files) => {
 
     // 使用sharp库将图片转换为jpg格式并进行无损压缩
     sharp(inputPath)
-      .resize(300, 300, {
+      .resize(220, 220, {
         fit: 'cover',
         position: 'centre',
         background: { r: 255, g: 255, b: 255, alpha: 1 }
