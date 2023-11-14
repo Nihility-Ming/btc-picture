@@ -22,13 +22,6 @@
 
 </head>
 <body>
-<style>
-#goBackA {
-	background-size: 20px 20px !important;
-	width: 30px !important;
-	height: 30px !important;
-}
-</style>
 
 <h1>比特币精美壁纸<span><span id="btcPicCount">---</span>张</span></h1>
 <div id="container">
@@ -46,9 +39,25 @@
 <footer>版权所有 © 2023 <a href="/">比特趋势大作手</a></footer>
 
 <script src="js/index.js"></script>
-
-<script src="/js/theme-goBack.js"></script>
 <script src="/js/myTongji.js"></script>
+
+<!-- 导航按钮 -->
+<style>
+#goBackA {
+	top: 15px !important;
+	background-size: 20px 20px !important;
+	width: 38px !important;
+	height: 38px !important;
+}
+</style>
+<script src="/js/theme-goBack.js"></script>
+<script>
+const goBackA = document.getElementById("goBackA");
+goBackA.onclick = function(){
+	window.location.href = "/";
+	return false;
+}
+</script>
 
 </body>
 </html>
